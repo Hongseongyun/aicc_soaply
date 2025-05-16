@@ -108,8 +108,16 @@ header .user a {
   height: 100%;
 }
 
+header .menu-icon {
+  display: none;
+}
+
+header .mobile-menus {
+  display: none;
+}
+
 body {
-  height: 3000px;
+  height: 100%;
 }
 
 /* Main Landing Section style */
@@ -120,12 +128,26 @@ body {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #main-section img {
   width: var(--ls-full);
   height: 100vh;
   object-fit: cover;
+  min-height: 786px;
+  min-width: 1020px;
+}
+
+#main-section .overlay {
+  position: absolute;
+  width: var(--ls-full);
+  height: var(--ls-full);
+  top: 0;
+  left: 0;
+  opacity: 0.4;
 }
 
 #main-section .landing-text-box {
@@ -324,4 +346,67 @@ body {
 
 .insta-section .insta-info .insta-id i {
   font-size: var(--fs-20);
+}
+
+/* Footer Section Style */
+footer {
+  padding: 3rem 0;
+  width: var(--ls-full);
+}
+
+footer .footer-upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-logo {
+  width: 100px;
+}
+
+footer .footer-logo img {
+  width: var(--ls-full);
+}
+
+footer .footer-info {
+  display: flex;
+}
+
+footer .footer-info > ul {
+  display: flex;
+}
+
+footer .footer-nav a {
+  font-size: var(--fs-small-text);
+  padding: var(--el-medium);
+}
+
+footer .footer-sns li {
+  padding-left: 1rem;
+}
+
+footer .footer-sns li a {
+  display: block;
+  width: 20px;
+}
+
+footer .footer-sns li a img {
+  width: var(--ls-full);
+}
+
+footer .footer-line {
+  width: var(--ls-full);
+  height: 1px;
+  background: var(--color-black);
+  margin: var(--el-medium) 0;
+}
+
+footer .footer-lower {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-small-text);
+  align-items: center;
+}
+
+footer .footer-lower a {
+  text-decoration: underline;
 }
